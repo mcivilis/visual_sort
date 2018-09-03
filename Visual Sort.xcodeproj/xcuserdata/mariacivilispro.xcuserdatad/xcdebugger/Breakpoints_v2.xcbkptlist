@@ -6,16 +6,16 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Visual Sort/SortVisualizerViewController.swift"
-            timestampString = "557697445.397063"
+            filePath = "Visual Sort/Sorter.swift"
+            timestampString = "557699279.375302"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "27"
-            endingLineNumber = "27"
-            landmarkName = "viewDidLoad()"
+            startingLineNumber = "30"
+            endingLineNumber = "30"
+            landmarkName = "beginSort()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

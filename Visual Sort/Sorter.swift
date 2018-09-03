@@ -8,10 +8,12 @@
 
 import UIKit
 class Sorter {
+    let sortDelegate: SortDelegate
     let numbersToSort: [Int]
     let sort: Sort
     
-    init(with sort: Sort, max: Int) {
+    init(with sort: Sort, delegate: SortDelegate, max: Int) {
+        self.sortDelegate = delegate
         self.sort = sort
         var numbers = Array(1...max)
         var shuffled = [Int]()
@@ -21,5 +23,10 @@ class Sorter {
             numbers.remove(at: randomPosition)
         }
         self.numbersToSort = shuffled
+    }
+    
+    func beginSort() {
+        // TODO
+        sortDelegate.sortDidChange()
     }
 }

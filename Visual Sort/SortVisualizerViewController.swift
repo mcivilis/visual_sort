@@ -19,22 +19,38 @@ class SortVisualizerViewController: UIViewController {
     /// `Sorter` provides visialization data.
     var sorter: Sorter?
     
-    /// Constant that determines the number of items to sort
+    /// Constant that determines the number of items to sort.
     let numberOfItemsToSort: Int = 10
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        configureView()
+        guard let sort = sort else { return }
+        // Update the initial user interface for `Sort`.
+        configureView(with: sort)
+        // Create `Sorter` that will manage visualization data.
+        sorter = Sorter(with: sort, delegate: self, max: numberOfItemsToSort)
+        // Begin sorting
+        sorter?.beginSort()
     }
-    
-    func configureView() {
-        // Update the user interface for the detail item.
-        if let sort = sort {
-            // Set navigation title
-            navigationItem.title = sort.description
-            // Create `Sorter` that will manage visualization data
-            sorter = Sorter(with: sort, max: numberOfItemsToSort)
-        }
+
+}
+/// MARK: - Helpers
+extension SortVisualizerViewController {
+    /// Update the initial user interface for `Sort`.
+    func configureView(with sort: Sort) {
+        // Set navigation title
+        navigationItem.title = sort.description
+    }
+    /// Update view for current `Sorter` state
+    func updateView() {
+        // TODO
+    }
+}
+
+/// MARK: - <SortDelegate>
+extension SortVisualizerViewController: SortDelegate {
+    func sortDidChange() {
+        updateView()
     }
 }
 
