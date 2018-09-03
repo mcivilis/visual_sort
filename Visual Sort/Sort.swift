@@ -21,13 +21,13 @@ struct Sort {
         self.type = type
         switch type {
         case .insertion:
-            self.description = "INSERTION SORT"
+            self.description = "Insertion Sort"
         case .bubble:
-            self.description = "BUBBLE SORT"
+            self.description = "Bubble Sort"
         case .selection:
-            self.description = "SELECTION SORT"
+            self.description = "Selection Sort"
         case .merge:
-            self.description = "MERGE SORT"
+            self.description = "Merge Sort"
         }
     }
 }

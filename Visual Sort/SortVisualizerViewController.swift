@@ -10,30 +10,31 @@ import UIKit
 
 class SortVisualizerViewController: UIViewController {
     
-    
+    /// Container view for sorting visualization
     @IBOutlet var sortContainer: UIView!
     
-    let itemWidth = 15.0
-
-    func configureView() {
-        // Update the user interface for the detail item.
-        if let detail = sort {
-            navigationItem.title = detail.description
-        }
-    }
+    /// `Sort` that is currently being visualized.
+    var sort: Sort?
+    
+    /// `Sorter` provides visialization data.
+    var sorter: Sorter?
+    
+    /// Constant that determines the number of items to sort
+    let numberOfItemsToSort: Int = 10
 
     override func viewDidLoad() {
         super.viewDidLoad()
         configureView()
     }
-
-    var sort: Sort? {
-        didSet {
-            // Update the view.
-            configureView()
+    
+    func configureView() {
+        // Update the user interface for the detail item.
+        if let sort = sort {
+            // Set navigation title
+            navigationItem.title = sort.description
+            // Create `Sorter` that will manage visualization data
+            sorter = Sorter(with: sort, max: numberOfItemsToSort)
         }
     }
-
-
 }
 
