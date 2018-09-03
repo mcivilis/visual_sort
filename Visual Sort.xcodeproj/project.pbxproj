@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		F36CC130213DC2A000CB6A89 /* Sort.swift in Sources */ = {isa = PBXBuildFile; fileRef = F36CC12F213DC2A000CB6A89 /* Sort.swift */; };
 		F36CC132213DCCF900CB6A89 /* SortDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F36CC131213DCCF900CB6A89 /* SortDelegate.swift */; };
+		F36CC134213DD2F600CB6A89 /* SortView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F36CC133213DD2F600CB6A89 /* SortView.swift */; };
 		F3BB3648213DAF4F007D478B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3BB3647213DAF4F007D478B /* AppDelegate.swift */; };
 		F3BB364A213DAF4F007D478B /* MasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3BB3649213DAF4F007D478B /* MasterViewController.swift */; };
 		F3BB364C213DAF4F007D478B /* SortVisualizerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3BB364B213DAF4F007D478B /* SortVisualizerViewController.swift */; };
@@ -21,6 +22,7 @@
 /* Begin PBXFileReference section */
 		F36CC12F213DC2A000CB6A89 /* Sort.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sort.swift; sourceTree = "<group>"; };
 		F36CC131213DCCF900CB6A89 /* SortDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SortDelegate.swift; sourceTree = "<group>"; };
+		F36CC133213DD2F600CB6A89 /* SortView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SortView.swift; sourceTree = "<group>"; };
 		F3BB3644213DAF4F007D478B /* Visual Sort.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Visual Sort.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F3BB3647213DAF4F007D478B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F3BB3649213DAF4F007D478B /* MasterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasterViewController.swift; sourceTree = "<group>"; };
@@ -68,6 +70,7 @@
 				F36CC131213DCCF900CB6A89 /* SortDelegate.swift */,
 				F36CC12F213DC2A000CB6A89 /* Sort.swift */,
 				F3BB364B213DAF4F007D478B /* SortVisualizerViewController.swift */,
+				F36CC133213DD2F600CB6A89 /* SortView.swift */,
 				F3BB364D213DAF4F007D478B /* Main.storyboard */,
 				F3BB3650213DAF50007D478B /* Assets.xcassets */,
 				F3BB3652213DAF50007D478B /* LaunchScreen.storyboard */,
@@ -147,6 +150,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F36CC134213DD2F600CB6A89 /* SortView.swift in Sources */,
 				F3BB364C213DAF4F007D478B /* SortVisualizerViewController.swift in Sources */,
 				F3BB364A213DAF4F007D478B /* MasterViewController.swift in Sources */,
 				F36CC132213DCCF900CB6A89 /* SortDelegate.swift in Sources */,

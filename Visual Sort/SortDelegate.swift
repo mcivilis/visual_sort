@@ -9,5 +9,6 @@
 import Foundation
 
 protocol SortDelegate {
-    func sortDidChange()
+    func sortIsReady(with numbers: [Int])
+    func sortDidChange(with numbers: [Int])
 }

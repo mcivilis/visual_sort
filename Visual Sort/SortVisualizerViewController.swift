@@ -11,7 +11,7 @@ import UIKit
 class SortVisualizerViewController: UIViewController {
     
     /// Container view for sorting visualization
-    @IBOutlet var sortContainer: UIView!
+    @IBOutlet var sortView: SortView!
     
     /// `Sort` that is currently being visualized.
     var sort: Sort?
@@ -20,7 +20,7 @@ class SortVisualizerViewController: UIViewController {
     var sorter: Sorter?
     
     /// Constant that determines the number of items to sort.
-    let numberOfItemsToSort: Int = 10
+    let numberOfItemsToSort: Int = 20
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -49,7 +49,10 @@ extension SortVisualizerViewController {
 
 /// MARK: - <SortDelegate>
 extension SortVisualizerViewController: SortDelegate {
-    func sortDidChange() {
+    func sortIsReady(with numbers: [Int]) {
+        sortView.numers = numbers
+    }
+    func sortDidChange(with numbers: [Int]) {
         updateView()
     }
 }

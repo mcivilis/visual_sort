@@ -9,7 +9,7 @@
 import UIKit
 class Sorter {
     let sortDelegate: SortDelegate
-    let numbersToSort: [Int]
+    let numbers: [Int]
     let sort: Sort
     
     init(with sort: Sort, delegate: SortDelegate, max: Int) {
@@ -22,11 +22,10 @@ class Sorter {
             shuffled.append(numbers[randomPosition])
             numbers.remove(at: randomPosition)
         }
-        self.numbersToSort = shuffled
+        self.numbers = shuffled
     }
     
     func beginSort() {
-        // TODO
-        sortDelegate.sortDidChange()
+        sortDelegate.sortIsReady(with: numbers)
     }
 }
