@@ -12,48 +12,46 @@ class SortVisualizerViewController: UIViewController {
     
     /// Container view for sorting visualization
     @IBOutlet var sortView: SortView!
+    @IBOutlet var sortButton: UIButton!
     
     /// `Sort` that is currently being visualized.
     var sort: Sort?
     
-    /// `Sorter` provides visialization data.
-    var sorter: Sorter?
-    
     /// Constant that determines the number of items to sort.
-    let numberOfItemsToSort: Int = 20
+    let numberOfItemsToSort: Int = 5
+    
+    /// Index that keeps track of what iteration the sort is ob
+    var index: Int = 0
 
     override func viewDidLoad() {
         super.viewDidLoad()
         guard let sort = sort else { return }
-        // Update the initial user interface for `Sort`.
-        configureView(with: sort)
-        // Create `Sorter` that will manage visualization data.
-        sorter = Sorter(with: sort, delegate: self, max: numberOfItemsToSort)
-        // Begin sorting
-        sorter?.beginSort()
-    }
-
-}
-/// MARK: - Helpers
-extension SortVisualizerViewController {
-    /// Update the initial user interface for `Sort`.
-    func configureView(with sort: Sort) {
-        // Set navigation title
         navigationItem.title = sort.description
+        sortView.configure(with: sort.type, max: numberOfItemsToSort, delegate: self)
     }
-    /// Update view for current `Sorter` state
-    func updateView() {
-        // TODO
+    
+    @IBAction func sortButtonTapped(_ sortButton: UIButton) {
+        guard let sort = sort else { return }
+        if sortButton.titleLabel?.text == "RESET" {
+            sortButton.setTitle("SORT", for: .normal)
+            sortButton.setTitle("SORT", for: .selected)
+            sortButton.titleLabel?.sizeToFit()
+            sortView.configure(with: sort.type, max: numberOfItemsToSort, delegate: self)
+        } else {
+            sortView.sort()
+        }
     }
 }
 
-/// MARK: - <SortDelegate>
-extension SortVisualizerViewController: SortDelegate {
-    func sortIsReady(with numbers: [Int]) {
-        sortView.numers = numbers
+extension SortVisualizerViewController: SortViewDelegate {
+    func next() {
+        sortView.sort()
     }
-    func sortDidChange(with numbers: [Int]) {
-        updateView()
+    
+    func finished() {
+        sortButton.setTitle("RESET", for: .normal)
+        sortButton.setTitle("RESET", for: .selected)
+        sortButton.titleLabel?.sizeToFit()
     }
 }
 

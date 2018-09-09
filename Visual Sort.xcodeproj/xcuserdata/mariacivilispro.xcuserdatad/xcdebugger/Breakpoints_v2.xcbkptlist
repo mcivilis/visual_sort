@@ -9,13 +9,13 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Visual Sort/SortVisualizerViewController.swift"
-            timestampString = "557711582.506505"
+            filePath = "Visual Sort/Sorter.swift"
+            timestampString = "558212787.708859"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "53"
-            endingLineNumber = "53"
-            landmarkName = "sortIsReady(with:)"
+            startingLineNumber = "40"
+            endingLineNumber = "40"
+            landmarkName = "continueSort(for:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -26,29 +26,39 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Visual Sort/Sorter.swift"
-            timestampString = "557711582.506856"
+            timestampString = "558212787.708927"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "29"
-            endingLineNumber = "29"
+            startingLineNumber = "42"
+            endingLineNumber = "42"
+            landmarkName = "continueSort(for:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Visual Sort/Sorter.swift"
+            timestampString = "558212787.708974"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "34"
+            endingLineNumber = "34"
             landmarkName = "beginSort()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         BreakpointExtensionID = "Xcode.Breakpoint.ExceptionBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "No"
+            shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Visual Sort/Sorter.swift"
-            timestampString = "557711582.506902"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "25"
-            endingLineNumber = "25"
-            landmarkName = "init(with:delegate:max:)"
-            landmarkType = "7">
+            scope = "0"
+            stopOnStyle = "0">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -57,14 +67,14 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Visual Sort/BarView.swift"
-            timestampString = "557711582.506941"
+            filePath = "Visual Sort/SortView.swift"
+            timestampString = "558225427.495254"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "14"
-            endingLineNumber = "14"
-            landmarkName = "fillPercent"
-            landmarkType = "24">
+            startingLineNumber = "46"
+            endingLineNumber = "46"
+            landmarkName = "sort()"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

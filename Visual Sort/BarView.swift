@@ -9,36 +9,19 @@
 import UIKit
 
 class BarView: UIStackView {
-    var fillPercent: Double? {
-        didSet {
-            guard let fillPercent = fillPercent,
-                let topHeightConstraint = topHeightConstraint,
-                let bottomHeightConstraint = bottomHeightConstraint else { return }
-            topHeightConstraint.constant = frame.height * (1 - CGFloat(fillPercent))
-            bottomHeightConstraint.constant = frame.height * CGFloat(fillPercent)
-            layoutIfNeeded()
-        }
-    }
-    private var topHeightConstraint: NSLayoutConstraint?
-    private var bottomHeightConstraint: NSLayoutConstraint?
+    var fillPercent: Double?
     
     init(fillPercent: Double, frame: CGRect) {
         
         // Create top portion of the bar
         let top = UIView(frame: .zero)
-        topHeightConstraint = top.heightAnchor.constraint(equalToConstant: frame.height * (1 - CGFloat(fillPercent)))
-        if let topHeightConstraint = topHeightConstraint {
-            topHeightConstraint.isActive = true
-        }
+        top.heightAnchor.constraint(equalToConstant: frame.height * (1 - CGFloat(fillPercent))).isActive = true
         top.widthAnchor.constraint(equalToConstant: CGFloat(frame.width)).isActive = true
         top.backgroundColor = .white
         
         // Create bottom portion of the bar
         let bottom = UIView(frame: .zero)
-        bottomHeightConstraint = bottom.heightAnchor.constraint(equalToConstant: frame.height * CGFloat(fillPercent))
-        if let bottomHeightConstraint = bottomHeightConstraint {
-            bottomHeightConstraint.isActive = true
-        }
+        bottom.heightAnchor.constraint(equalToConstant: frame.height * CGFloat(fillPercent)).isActive = true
         bottom.widthAnchor.constraint(equalToConstant: CGFloat(frame.width)).isActive = true
         bottom.backgroundColor = .darkGray
         bottom.layer.borderWidth = 1

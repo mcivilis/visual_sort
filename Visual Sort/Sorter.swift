@@ -9,8 +9,8 @@
 import UIKit
 class Sorter {
     let sortDelegate: SortDelegate
-    let numbers: [Int]
     let sort: Sort
+    var numbers: [Int]
     
     init(with sort: Sort, delegate: SortDelegate, max: Int) {
         self.sortDelegate = delegate
@@ -25,7 +25,40 @@ class Sorter {
         self.numbers = shuffled
     }
     
+    func prepareToSort() {
+        //sortDelegate.sortIsReady(with: numbers)
+    }
     func beginSort() {
-        sortDelegate.sortIsReady(with: numbers)
+        insertionSort(for: 0)
+        // trigger UI update of the sort visualization
+        //sortDelegate.sortDidChange(with: numbers)
+    }
+    func continueSort(for index: Int) {
+        if index < numbers.count {
+            insertionSort(for: index)
+            // trigger UI update of the sort visualization
+            //sortDelegate.sortDidChange(with: numbers)
+        } else {
+            sortDelegate.sortDidFinish()
+        }
+    }
+}
+private extension Sorter {
+    func insertionSort(for primaryindex: Int) {
+        // check for trivial case
+        guard numbers.count > 1 else {
+            sortDelegate.sortDidFinish()
+            return
+        }
+        let key = numbers[primaryindex]
+        var secondaryindex = primaryindex
+        while secondaryindex > -1 {
+            if key < numbers[secondaryindex] {
+                // move to correct position
+                numbers.remove(at: secondaryindex + 1)
+                numbers.insert(key, at: secondaryindex)
+            }
+            secondaryindex -= 1
+        }
     }
 }

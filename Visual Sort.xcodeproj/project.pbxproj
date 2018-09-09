@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F342E6C22145A11500AD7F96 /* ArraySortExtention.swift in Sources */ = {isa = PBXBuildFile; fileRef = F342E6C12145A11500AD7F96 /* ArraySortExtention.swift */; };
 		F36CC130213DC2A000CB6A89 /* Sort.swift in Sources */ = {isa = PBXBuildFile; fileRef = F36CC12F213DC2A000CB6A89 /* Sort.swift */; };
 		F36CC132213DCCF900CB6A89 /* SortDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F36CC131213DCCF900CB6A89 /* SortDelegate.swift */; };
 		F36CC134213DD2F600CB6A89 /* SortView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F36CC133213DD2F600CB6A89 /* SortView.swift */; };
@@ -21,6 +22,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		F342E6C12145A11500AD7F96 /* ArraySortExtention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArraySortExtention.swift; sourceTree = "<group>"; };
 		F36CC12F213DC2A000CB6A89 /* Sort.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sort.swift; sourceTree = "<group>"; };
 		F36CC131213DCCF900CB6A89 /* SortDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SortDelegate.swift; sourceTree = "<group>"; };
 		F36CC133213DD2F600CB6A89 /* SortView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SortView.swift; sourceTree = "<group>"; };
@@ -67,6 +69,7 @@
 			isa = PBXGroup;
 			children = (
 				F3BB3647213DAF4F007D478B /* AppDelegate.swift */,
+				F342E6C12145A11500AD7F96 /* ArraySortExtention.swift */,
 				F3BB3649213DAF4F007D478B /* MasterViewController.swift */,
 				F3F0406F213DB7DE00D99BBA /* Sorter.swift */,
 				F36CC131213DCCF900CB6A89 /* SortDelegate.swift */,
@@ -156,6 +159,7 @@
 				F36CC136213DF35700CB6A89 /* BarView.swift in Sources */,
 				F36CC134213DD2F600CB6A89 /* SortView.swift in Sources */,
 				F3BB364C213DAF4F007D478B /* SortVisualizerViewController.swift in Sources */,
+				F342E6C22145A11500AD7F96 /* ArraySortExtention.swift in Sources */,
 				F3BB364A213DAF4F007D478B /* MasterViewController.swift in Sources */,
 				F36CC132213DCCF900CB6A89 /* SortDelegate.swift in Sources */,
 				F3F04070213DB7DE00D99BBA /* Sorter.swift in Sources */,
