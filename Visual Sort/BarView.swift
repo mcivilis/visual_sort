@@ -11,18 +11,18 @@ import UIKit
 class BarView: UIStackView {
     var fillPercent: Double?
     
-    init(fillPercent: Double, frame: CGRect) {
+    init(fillPercent: Double, frame: CGRect, width: CGFloat) {
         
         // Create top portion of the bar
         let top = UIView(frame: .zero)
         top.heightAnchor.constraint(equalToConstant: frame.height * (1 - CGFloat(fillPercent))).isActive = true
-        top.widthAnchor.constraint(equalToConstant: CGFloat(frame.width)).isActive = true
+        top.widthAnchor.constraint(equalToConstant: width).isActive = true
         top.backgroundColor = .white
         
         // Create bottom portion of the bar
         let bottom = UIView(frame: .zero)
         bottom.heightAnchor.constraint(equalToConstant: frame.height * CGFloat(fillPercent)).isActive = true
-        bottom.widthAnchor.constraint(equalToConstant: CGFloat(frame.width)).isActive = true
+        bottom.widthAnchor.constraint(equalToConstant: width).isActive = true
         bottom.backgroundColor = .darkGray
         bottom.layer.borderWidth = 1
         bottom.layer.borderColor = UIColor.white.cgColor

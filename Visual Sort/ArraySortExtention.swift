@@ -22,7 +22,6 @@ extension Array where Element: Comparable {
             let key = sortedArray[primaryindex]
             var secondaryindex = primaryindex
             while secondaryindex > -1 {
-                print("comparing \(key) and \(sortedArray[secondaryindex])")
                 if key < sortedArray[secondaryindex] {
                     
                     // Move into correct position
