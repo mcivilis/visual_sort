@@ -58,6 +58,11 @@ class SortView: UIStackView {
             guard let weakself = self else { return }
             weakself.stepCounter += 1
             if weakself.stepCounter == weakself.steps.count {
+                for view in weakself.arrangedSubviews {
+                    if let barView = view as? BarView {
+                        barView.highlight()
+                    }
+                }
                 weakself.sortViewDelegate?.finished()
             } else {
                 weakself.sortViewDelegate?.next()
@@ -80,13 +85,20 @@ private extension SortView {
     func configureSteps(with type: SortType, numbers: [Int]) -> [(Int, Int)] {
         switch type {
         case .insertion:
-            return numbers.insertionSortSteps()
-        default:
-            return numbers.insertionSortSteps()
+            return SortSteps.insertionSort(for: numbers)
+        case .bubble:
+            return SortSteps.bubbleSort(for: numbers)
+        case .selection:
+            return SortSteps.selectionSort(for: numbers)
+        case .merge:
+            return SortSteps.insertionSort(for: numbers) //TODO
         }
     }
     func moveBarView(from fromIndex: Int, to toIndex: Int) {
         let viewToMove = arrangedSubviews[fromIndex]
+        if let barView = viewToMove as? BarView {
+            barView.highlight()
+        }
         removeArrangedSubview(viewToMove)
         insertArrangedSubview(viewToMove, at: toIndex)
         layoutIfNeeded()

@@ -11,6 +11,8 @@ import UIKit
 class BarView: UIStackView {
     var fillPercent: Double?
     
+    private let bottom = UIView(frame: .zero)
+    
     init(fillPercent: Double, frame: CGRect, width: CGFloat) {
         
         // Create top portion of the bar
@@ -20,7 +22,6 @@ class BarView: UIStackView {
         top.backgroundColor = .white
         
         // Create bottom portion of the bar
-        let bottom = UIView(frame: .zero)
         bottom.heightAnchor.constraint(equalToConstant: frame.height * CGFloat(fillPercent)).isActive = true
         bottom.widthAnchor.constraint(equalToConstant: width).isActive = true
         bottom.backgroundColor = .darkGray
@@ -41,5 +42,8 @@ class BarView: UIStackView {
     }
     override init(frame: CGRect) {
         super.init(frame: frame)
+    }
+    func highlight() {
+        bottom.backgroundColor = .blue
     }
 }
