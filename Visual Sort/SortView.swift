@@ -90,8 +90,6 @@ private extension SortView {
             return SortSteps.bubbleSort(for: numbers)
         case .selection:
             return SortSteps.selectionSort(for: numbers)
-        case .merge:
-            return SortSteps.insertionSort(for: numbers) //TODO
         }
     }
     func swapView(at swapIndex1: Int, at swapIndex2: Int) {

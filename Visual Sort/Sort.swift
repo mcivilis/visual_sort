@@ -11,7 +11,6 @@ enum SortType {
     case insertion
     case bubble
     case selection
-    case merge
 }
 struct Sort {
     let type: SortType
@@ -26,8 +25,6 @@ struct Sort {
             self.description = "Bubble Sort"
         case .selection:
             self.description = "Selection Sort"
-        case .merge:
-            self.description = "Merge Sort"
         }
     }
 }

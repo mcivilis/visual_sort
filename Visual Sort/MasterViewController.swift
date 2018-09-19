@@ -14,8 +14,7 @@ class MasterViewController: UITableViewController {
     
     let sorts = [Sort(with: .insertion),
                  Sort(with: .bubble),
-                 Sort(with: .selection),
-                 Sort(with: .merge)]
+                 Sort(with: .selection)]
 
     override func viewDidLoad() {
         super.viewDidLoad()
