@@ -13,6 +13,7 @@ class SortVisualizerViewController: UIViewController {
     /// Container view for sorting visualization
     @IBOutlet var sortView: SortView!
     @IBOutlet var sortButton: UIButton!
+    @IBOutlet var algorithmTextView: UITextView!
     
     /// `Sort` that is currently being visualized.
     var sort: Sort?
@@ -27,6 +28,7 @@ class SortVisualizerViewController: UIViewController {
         super.viewDidLoad()
         guard let sort = sort else { return }
         navigationItem.title = sort.description
+        algorithmTextView.text = sort.algorithm
         sortView.configure(with: sort.type, max: numberOfItemsToSort, delegate: self)
     }
     
