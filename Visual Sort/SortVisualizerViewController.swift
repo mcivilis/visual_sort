@@ -19,7 +19,7 @@ class SortVisualizerViewController: UIViewController {
     var sort: Sort?
     
     /// Constant that determines the number of items to sort.
-    let numberOfItemsToSort: Int = 5
+    let numberOfItemsToSort: Int = 15
     
     /// Index that keeps track of what iteration the sort is ob
     var index: Int = 0

@@ -50,7 +50,7 @@ class SortView: UIStackView {
             sortViewDelegate?.finished()
             return
         }
-        UIView.animate(withDuration: 1, animations: { [weak self] in
+        UIView.animate(withDuration: 0.25, animations: { [weak self] in
         guard let weakself = self else { return }
             let step = weakself.steps[weakself.stepCounter]
             weakself.swapView(at: step.0, at: step.1)
